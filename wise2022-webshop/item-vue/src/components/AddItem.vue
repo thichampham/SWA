@@ -40,7 +40,7 @@
           class="form-control"
           id="availability"
           required
-          v-model="item.availability"
+          v-model="item.availability" 
           name="availability"
           type="text"
         />
@@ -83,8 +83,7 @@ export default {
         price: this.item.price,
         availability: this.item.availability
       };
-
-      ItemDataService.create(data)
+    ItemDataService.create(data)
         .then(response => {
           this.item.id = response.data.id;
           console.log(response.data);
